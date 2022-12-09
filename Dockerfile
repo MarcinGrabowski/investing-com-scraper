@@ -16,7 +16,7 @@ RUN mkdir -p /usr/src/app
 RUN mkdir -p /usr/src/app/node_modules
 RUN mkdir -p /usr/src/app/data
 WORKDIR /usr/src/app
-COPY package.json /usr/src/app/
+# COPY package.json /usr/src/app/
 RUN chmod -R 777 /usr/src/app
 RUN npm install
 RUN npm install -g npm@9.1.3
