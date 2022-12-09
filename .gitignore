@@ -55,4 +55,4 @@ logs/
 #composer.lock
 
 .env
-package*.json
+package-lock.json
