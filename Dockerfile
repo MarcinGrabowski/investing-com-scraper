@@ -19,7 +19,7 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 RUN chmod -R 777 /usr/src/app
 RUN npm install
-RUN npm install -g npm@9.1.3
+RUN npm install -g npm@9.2
 RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
     && mkdir -p /home/pptruser/Downloads \
     && chown -R pptruser:pptruser /home/pptruser \
