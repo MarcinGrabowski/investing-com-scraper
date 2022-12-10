@@ -1,6 +1,7 @@
 const puppeteer = require("puppeteer")
 const fs = require("fs")
 const request = require('request')
+require('dotenv').config()
 
 const scraping = async () => {
     var startTime = performance.now();
@@ -53,11 +54,11 @@ async function publish() {
     await request(
         {
         method:'post',
-        url:'https://discord.com/api/webhooks/' + process.env.DC_ADDRESS, 
+        url: process.env.DC_ADDRESS,
         formData: { 'username': 'Investing.com', 'image': readStream },
         headers: headersOpt,
         json: true,
-    }, function (error, response, body) {  
+    }, function (error, response, body) {
         console.log(error); 
     });
 }
