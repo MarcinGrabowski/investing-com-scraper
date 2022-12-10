@@ -28,6 +28,7 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
 
 USER pptruser
 
+COPY .env /usr/src/app/
 COPY index.js /usr/src/app/
 
 EXPOSE 3000
