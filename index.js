@@ -7,7 +7,7 @@ const scraping = async () => {
     var startTime = performance.now();
     console.log('RUN scraping ' + new Date().toLocaleString());
     puppeteer.launch({
-        headless: false,
+        headless: true,
         args: [
           '--no-sandbox',
           '--disable-setuid-sandbox',
